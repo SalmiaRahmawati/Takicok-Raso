@@ -76,7 +76,7 @@ display: none;
   padding: 20px;
   min-height: 80vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   font-size: 1.4rem;
   background-color: #FFBB5C;
@@ -122,15 +122,17 @@ display: none;
   color: #952323;
 }
 
-table{
+.table{
   width: 900px;
   border-collapse: collapse;
   padding: 15px;
   margin: auto;
+  margin-bottom: 1rem;
 }
 
-table:last-of-type{
-margin-bottom: 1rem;
+thead th{
+  text-align: left;
+  padding: 10px;
 }
 
 .profilecard {
@@ -154,11 +156,12 @@ footer {
   padding: 15px;
   background-color: #FF9B50;
   color: #952323;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {  
   html {
-     font-size: 75%;
+     font-size: 70%;
 
   }
 
@@ -181,13 +184,27 @@ footer {
   }
 
   .image{
-    width: 95%;
+    max-width: 100%;
   }
 
   .card{
-    display: block;
+    /* display: block;*/
+    flex-direction: column;
   }
 
+  table{
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  table th, table td{
+    padding: 8px;
+  }
+
+  thead th {
+    text-align: left;
+    padding-left: 10px;
+  }
 
 }
 
